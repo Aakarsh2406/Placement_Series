@@ -4,38 +4,37 @@ import java.util.Arrays;
 
 public class MergeTwoArrayWithoutExtraSpace {
 
-    static String merger(int[] arr1, int[] arr2) {
+    static void merger(int[] nums1, int[] nums2,int m, int n) {
 
-        if(arr1.length==0)
-            return Arrays.toString(arr2);
-        if(arr2.length==0)
-            return Arrays.toString(arr1);
+        if(nums1.length==0)
+            System.out.println(Arrays.toString(nums2));
+        if(nums2.length==0)
+            System.out.println(Arrays.toString(nums1));
 
         int temp=0;
-        int i=arr1.length-1;
-        System.out.println(i);
+        int i=nums1.length-1;
+
         int j=0;
-        while (i>=0 && j<= arr2.length-1)
+        while (i>=0 && j<= nums2.length-1)
         {
-            System.out.println(i+" "+j);
-            if(arr1[i]>arr2[j])
+            if(nums1[i]>nums2[j])
             {
-                temp=arr1[i];
-                arr1[i]=arr2[j];
-                arr2[j]=temp;
+                temp=nums1[i];
+                nums1[i]=nums2[j];
+                nums2[j]=temp;
 
             }
             i--;
             j++;
         }
-       Arrays.sort(arr1);
-       Arrays.sort(arr2);
-        return Arrays.toString(arr1)+" "+Arrays.toString(arr2);
+       Arrays.sort(nums1);
+       Arrays.sort(nums2);
+        System.out.println(Arrays.toString(nums1)+" "+Arrays.toString(nums2));
     }
 
     public static void main(String[] args) {
-        int arr1[]={3,5,4};
-        int arr2[]={1,2,3};
-        System.out.println( merger(arr1,arr2));
+        int nums1[]={3,5,4};
+        int nums2[]={1,2,3};
+         merger(nums1,nums2, nums1.length, nums2.length);
     }
 }
