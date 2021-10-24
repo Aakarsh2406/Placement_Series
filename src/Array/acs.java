@@ -15,7 +15,9 @@ public class acs {
             i--;
             input2--;
         }
+
         return sum;
+
     }
 
     public static void main(String[] args) {
