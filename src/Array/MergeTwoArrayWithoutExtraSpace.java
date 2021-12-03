@@ -80,6 +80,6 @@ public class MergeTwoArrayWithoutExtraSpace {
     public static void main(String[] args) {
         int nums1[]={1,2,3,0,0,0};
         int nums2[]={2,5,6};
-        merger1(nums1,nums2, nums1.length, nums2.length);
+        merger(nums1,nums2, nums1.length, nums2.length);
     }
 }
